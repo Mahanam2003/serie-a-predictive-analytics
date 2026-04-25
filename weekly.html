@@ -60,7 +60,6 @@ nav.hidden { transform: translateY(-60px); }
 }
 .nav-links a:hover { color: var(--accent-blue); }
 .nav-links a.active { color: var(--accent-blue); }
-
 .page-hero {
   padding: 140px 8% 80px;
   background:
@@ -105,7 +104,6 @@ nav.hidden { transform: translateY(-60px); }
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(0.8); }
 }
-
 section { padding: 80px 8%; border-top: 1px solid var(--border-color); }
 .section-label {
   font-family: 'JetBrains Mono', monospace;
@@ -117,25 +115,19 @@ section h2 {
   font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: 1px; margin-bottom: 24px;
 }
 section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px; font-size: 1rem; }
-
-/* High confidence banner */
 .high-conf-banner {
   background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(245,158,11,0.05));
   border: 1px solid rgba(245,158,11,0.25); border-radius: 12px;
   padding: 24px 32px; margin-bottom: 32px;
   display: flex; align-items: center; gap: 20px;
 }
-.hc-icon {
-  font-size: 2rem; flex-shrink: 0;
-}
+.hc-icon { font-size: 2rem; flex-shrink: 0; }
 .hc-text h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem; letter-spacing: 1px; color: var(--accent-gold);
   margin-bottom: 4px;
 }
 .hc-text p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0; }
-
-/* High confidence picks grid */
 .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 24px 0 48px; }
 .pick-card {
   background: var(--bg-card); border: 1px solid var(--border-color);
@@ -161,7 +153,7 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
 }
 .pick-conf-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; }
 .pick-conf-bar { height: 100%; border-radius: 3px; background: var(--accent-gold); transition: width 1.2s ease; }
-.pick-flags { display: flex; gap: 6px; margin-top: 10px; }
+.pick-flags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
 .flag {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55rem; letter-spacing: 1px; text-transform: uppercase;
@@ -170,8 +162,6 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
 .flag-rain { background: rgba(59,130,246,0.15); color: #93c5fd; }
 .flag-stakes { background: rgba(239,68,68,0.15); color: #fca5a5; }
 .flag-agree { background: rgba(34,197,94,0.12); color: #86efac; }
-
-/* Match cards */
 .matches-list { display: flex; flex-direction: column; gap: 12px; }
 .match-card {
   background: var(--bg-card); border: 1px solid var(--border-color);
@@ -181,10 +171,9 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
 .match-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 16px 24px; border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap; gap: 12px;
 }
-.match-teams {
-  display: flex; align-items: center; gap: 16px;
-}
+.match-teams { display: flex; align-items: center; gap: 16px; }
 .team-name-main {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.3rem; letter-spacing: 1px;
@@ -228,7 +217,7 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
 .fill-draw { background: #64748b; }
 .fill-away { background: #ef4444; }
 .match-footer {
-  display: flex; gap: 8px; padding: 10px 24px;
+  display: flex; gap: 8px; padding: 10px 24px; flex-wrap: wrap;
   background: rgba(255,255,255,0.015); border-top: 1px solid var(--border-color);
 }
 .match-flag {
@@ -238,8 +227,6 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
 }
 .flag-exp { background: rgba(99,102,241,0.1); color: #a5b4fc; }
 .flag-elo { background: rgba(34,197,94,0.1); color: #86efac; }
-
-/* Model explanation */
 .how-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0; }
 .how-card {
   background: var(--bg-card); border: 1px solid var(--border-color);
@@ -251,8 +238,6 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
   font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 8px;
 }
 .how-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0; }
-
-/* Confidence key */
 .conf-key { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 32px; }
 .conf-key-item {
   display: flex; align-items: center; gap: 8px;
@@ -261,11 +246,10 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
   color: var(--text-secondary);
 }
 .conf-dot { width: 10px; height: 10px; border-radius: 50%; }
-
-/* Tab bar for all matches */
 .tab-bar {
   display: flex; gap: 4px; margin-bottom: 24px;
   background: var(--bg-secondary); border-radius: 8px; padding: 4px; width: fit-content;
+  flex-wrap: wrap;
 }
 .tab-btn {
   font-family: 'JetBrains Mono', monospace;
@@ -274,7 +258,13 @@ section p { color: var(--text-secondary); max-width: 760px; margin-bottom: 20px;
   background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.3s;
 }
 .tab-btn.active { background: var(--accent-blue); color: white; }
-
+.loading-state, .error-state {
+  text-align: center; padding: 60px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem; letter-spacing: 2px;
+}
+.error-state { color: var(--accent-red); }
 footer {
   padding: 60px 8%; border-top: 1px solid var(--border-color);
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;
@@ -288,8 +278,6 @@ footer .links a {
   padding: 10px 20px; border: 1px solid rgba(59,130,246,0.3); border-radius: 6px; transition: all 0.3s;
 }
 footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary); }
-
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
@@ -309,10 +297,9 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
   <div class="page-hero-label">Match-By-Match Predictions</div>
   <h1>WEEKLY<br><span class="highlight">PREDICTIONS</span></h1>
   <p>Individual match predictions powered by a 5-layer ensemble model. Every fixture gets a probability distribution across Home Win, Draw, and Away Win — plus a confidence score and weather flag.</p>
-  <div class="live-badge"><div class="live-dot"></div>Updated from live football-data.co.uk feed</div>
+  <div class="live-badge"><div class="live-dot"></div>Auto-updated from football-data.co.uk</div>
 </div>
 
-<!-- HOW IT WORKS -->
 <section id="how">
   <div class="section-label">The Method</div>
   <h2>How Each Prediction Is Made</h2>
@@ -331,7 +318,7 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
     <div class="how-card">
       <div class="icon">🌧</div>
       <h4>Weather</h4>
-      <p>Open-Meteo forecast API. Heavy rain (15mm+) reduces λ by 20%. In the test data, rainy matches had a 75% draw rate.</p>
+      <p>Open-Meteo forecast API. Heavy rain (15mm+) reduces λ by 20%. In test data, rainy matches had a 75% draw rate.</p>
     </div>
     <div class="how-card">
       <div class="icon">🔥</div>
@@ -341,7 +328,7 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
     <div class="how-card">
       <div class="icon">🎯</div>
       <h4>Promoted Prior</h4>
-      <p>New teams (Pisa, Cremonese) get a data-driven baseline from 24 historical promoted team seasons instead of a naive league-average assumption.</p>
+      <p>New teams (Pisa, Cremonese) get a data-driven baseline from 24 historical promoted team seasons instead of league average.</p>
     </div>
   </div>
 
@@ -355,11 +342,9 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
   <p style="font-size:0.85rem">Validated accuracy: <strong>87.5%</strong> on 40%+ confidence picks across 60 test matches. Low confidence picks are shown for completeness — the model says "don't bet these."</p>
 </section>
 
-<!-- HIGH CONFIDENCE PICKS -->
 <section id="picks">
-  <div class="section-label">Best Bets This Season</div>
+  <div class="section-label">Best Bets — Remaining Season</div>
   <h2>High Confidence Picks</h2>
-
   <div class="high-conf-banner">
     <div class="hc-icon">🎯</div>
     <div class="hc-text">
@@ -367,15 +352,14 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
       <p>These picks have Poisson and Elo pointing at the same outcome AND the model is highly confident. Historically 87.5% accurate in this bucket.</p>
     </div>
   </div>
-
-  <div class="picks-grid" id="highConfGrid"></div>
+  <div class="picks-grid" id="highConfGrid">
+    <div class="loading-state">Loading predictions...</div>
+  </div>
 </section>
 
-<!-- NEXT MATCHWEEK -->
 <section id="matchweek">
   <div class="section-label">Next Matchweek</div>
   <h2>All Upcoming Fixtures</h2>
-
   <div class="tab-bar">
     <button class="tab-btn active" onclick="filterMatches('all', this)">All Fixtures</button>
     <button class="tab-btn" onclick="filterMatches('high', this)">High Confidence</button>
@@ -383,49 +367,23 @@ footer .links a:hover { background: var(--accent-blue); color: var(--bg-primary)
     <button class="tab-btn" onclick="filterMatches('draw', this)">Draws</button>
     <button class="tab-btn" onclick="filterMatches('away', this)">Away Wins</button>
   </div>
-
-  <div class="matches-list" id="matchesList"></div>
+  <div class="matches-list" id="matchesList">
+    <div class="loading-state">Loading matches...</div>
+  </div>
 </section>
 
 <footer>
-  <div class="credits">Predictions update automatically via football-data.co.uk. Model validated on 60 matches across 6 matchweeks. Weather from Open-Meteo free API.</div>
+  <div class="credits">Predictions update via football-data.co.uk feed. Model validated on 60 matches across 6 matchweeks. Weather from Open-Meteo free API.</div>
   <div class="links">
     <a href="season.html">Season View →</a>
     <a href="https://github.com/Mahanam2003/serie-a-predictive-analytics" target="_blank">GitHub</a>
   </div>
 </footer>
 
+<!-- Predictions data loaded from external file (auto-generated by R) -->
+<script src="predictions.js"></script>
+
 <script>
-// ===================== DATA =====================
-// This array is auto-updated by scripts/15b_fix_predictions.R
-const weeklyMatches = [
-  { home: "Atalanta", away: "Genoa", predResult: "H", confidence: 50, probHome: 61.0, probDraw: 23.1, probAway: 15.5, expHome: 2.0, expAway: 0.8, bothAgree: true },
-  { home: "Lecce", away: "Genoa", predResult: "D", confidence: 8, probHome: 29.5, probDraw: 32.1, probAway: 38.4, expHome: 0.9, expAway: 1.1, bothAgree: false },
-  { home: "Fiorentina", away: "Genoa", predResult: "H", confidence: 42, probHome: 55.8, probDraw: 26.0, probAway: 18.0, expHome: 1.7, expAway: 0.8, bothAgree: true },
-  { home: "Parma", away: "Sassuolo", predResult: "D", confidence: 8, probHome: 38.6, probDraw: 25.9, probAway: 35.3, expHome: 1.6, expAway: 1.6, bothAgree: false },
-  { home: "Torino", away: "Sassuolo", predResult: "H", confidence: 26, probHome: 45.3, probDraw: 28.1, probAway: 26.6, expHome: 1.4, expAway: 1.0, bothAgree: true },
-  { home: "Fiorentina", away: "Sassuolo", predResult: "H", confidence: 46, probHome: 58.9, probDraw: 22.4, probAway: 18.1, expHome: 2.2, expAway: 1.2, bothAgree: true },
-  { home: "Genoa", away: "Milan", predResult: "A", confidence: 33, probHome: 24.3, probDraw: 25.7, probAway: 49.8, expHome: 1.1, expAway: 1.8, bothAgree: true },
-  { home: "Sassuolo", away: "Milan", predResult: "A", confidence: 38, probHome: 22.4, probDraw: 23.5, probAway: 53.6, expHome: 1.3, expAway: 2.2, bothAgree: true },
-  { home: "Bologna", away: "Roma", predResult: "D", confidence: 11, probHome: 40.6, probDraw: 29.1, probAway: 30.3, expHome: 1.4, expAway: 1.1, bothAgree: false },
-  { home: "Parma", away: "Roma", predResult: "A", confidence: 33, probHome: 23.7, probDraw: 26.4, probAway: 49.8, expHome: 1.1, expAway: 1.6, bothAgree: true }
-];
-
-const highConfPicks = [
-  { home: "Inter", away: "Parma", predResult: "H", confidence: 65, bothAgree: true, highStakes: false, rain: false },
-  { home: "Inter", away: "Verona", predResult: "H", confidence: 63, bothAgree: true, highStakes: false, rain: false },
-  { home: "Napoli", away: "Cremonese", predResult: "H", confidence: 60, bothAgree: true, highStakes: false, rain: false },
-  { home: "Milan", away: "Cagliari", predResult: "H", confidence: 56, bothAgree: true, highStakes: false, rain: false },
-  { home: "Pisa", away: "Napoli", predResult: "A", confidence: 55, bothAgree: true, highStakes: false, rain: false },
-  { home: "Lazio", away: "Pisa", predResult: "H", confidence: 53, bothAgree: true, highStakes: false, rain: false },
-  { home: "Juventus", away: "Verona", predResult: "H", confidence: 54, bothAgree: true, highStakes: false, rain: false },
-  { home: "Napoli", away: "Udinese", predResult: "H", confidence: 50, bothAgree: true, highStakes: false, rain: false },
-  { home: "Atalanta", away: "Genoa", predResult: "H", confidence: 50, bothAgree: true, highStakes: false, rain: false },
-  { home: "Cagliari", away: "Atalanta", predResult: "A", confidence: 51, bothAgree: true, highStakes: false, rain: false },
-  { home: "Bologna", away: "Cagliari", predResult: "H", confidence: 50, bothAgree: true, highStakes: false, rain: false }
-];
-
-// ===================== RENDER HIGH CONF =====================
 function getConfColor(conf) {
   if (conf >= 60) return '#3b82f6';
   if (conf >= 50) return '#22c55e';
@@ -439,34 +397,45 @@ function getPredLabel(m) {
   return 'Draw';
 }
 
-document.getElementById('highConfGrid').innerHTML = highConfPicks.map(m => {
-  const color = getConfColor(m.confidence);
-  const flags = [];
-  if (m.rain) flags.push('<span class="flag flag-rain">🌧 Rain</span>');
-  if (m.highStakes) flags.push('<span class="flag flag-stakes">🔥 High Stakes</span>');
-  if (m.bothAgree) flags.push('<span class="flag flag-agree">✓ Both Models Agree</span>');
-
-  return `<div class="pick-card">
-    <div class="pick-matchup">${m.home} vs ${m.away}</div>
-    <div class="pick-prediction">${getPredLabel(m)}</div>
-    <div class="pick-conf-row">
-      <div class="pick-conf-num" style="color:${color}">${m.confidence}%</div>
-      <div class="pick-conf-bar-wrap">
-        <div class="pick-conf-bar" style="width:${m.confidence}%;background:${color}"></div>
-      </div>
-    </div>
-    ${flags.length ? `<div class="pick-flags">${flags.join('')}</div>` : ''}
-  </div>`;
-}).join('');
-
-// ===================== RENDER MATCHES =====================
-let currentFilter = 'all';
-
 function getConfBadgeClass(conf) {
   return conf >= 50 ? 'conf-badge high' : 'conf-badge';
 }
 
+function renderHighConf() {
+  const container = document.getElementById('highConfGrid');
+  if (typeof highConfPicks === 'undefined' || !highConfPicks || highConfPicks.length === 0) {
+    container.innerHTML = '<div class="error-state">No high confidence picks available. Run scripts/16_update_website.R to generate predictions.</div>';
+    return;
+  }
+
+  container.innerHTML = highConfPicks.map(m => {
+    const color = getConfColor(m.confidence);
+    const flags = [];
+    if (m.rain) flags.push('<span class="flag flag-rain">🌧 Rain</span>');
+    if (m.highStakes) flags.push('<span class="flag flag-stakes">🔥 High Stakes</span>');
+    if (m.bothAgree) flags.push('<span class="flag flag-agree">✓ Both Models Agree</span>');
+
+    return `<div class="pick-card">
+      <div class="pick-matchup">${m.home} vs ${m.away}</div>
+      <div class="pick-prediction">${getPredLabel(m)}</div>
+      <div class="pick-conf-row">
+        <div class="pick-conf-num" style="color:${color}">${m.confidence}%</div>
+        <div class="pick-conf-bar-wrap">
+          <div class="pick-conf-bar" style="width:${m.confidence}%;background:${color}"></div>
+        </div>
+      </div>
+      ${flags.length ? `<div class="pick-flags">${flags.join('')}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
 function renderMatches(filter) {
+  const container = document.getElementById('matchesList');
+  if (typeof weeklyMatches === 'undefined' || !weeklyMatches || weeklyMatches.length === 0) {
+    container.innerHTML = '<div class="error-state">No predictions loaded. Run scripts/16_update_website.R then push to GitHub.</div>';
+    return;
+  }
+
   let data = weeklyMatches;
   if (filter === 'high') data = data.filter(m => m.confidence >= 40);
   if (filter === 'home') data = data.filter(m => m.predResult === 'H');
@@ -474,20 +443,16 @@ function renderMatches(filter) {
   if (filter === 'away') data = data.filter(m => m.predResult === 'A');
 
   if (data.length === 0) {
-    document.getElementById('matchesList').innerHTML = `
-      <div style="text-align:center;padding:60px;color:var(--text-muted);font-family:JetBrains Mono,monospace;font-size:0.8rem;letter-spacing:2px">
-        NO MATCHES IN THIS FILTER
-      </div>`;
+    container.innerHTML = '<div class="loading-state">No matches in this filter.</div>';
     return;
   }
 
-  document.getElementById('matchesList').innerHTML = data.map(m => {
+  container.innerHTML = data.map(m => {
     const label = getPredLabel(m);
-    const eloStr = `${m.expHome?.toFixed(1) ?? '--'} – ${m.expAway?.toFixed(1) ?? '--'} xG`;
     const flags = [];
     if (m.rain) flags.push('<span class="match-flag flag-rain">🌧 Rain — draw risk</span>');
     if (m.bothAgree) flags.push('<span class="match-flag flag-elo">✓ Both models agree</span>');
-    flags.push(`<span class="match-flag flag-exp">λ ${eloStr}</span>`);
+    flags.push(`<span class="match-flag flag-exp">λ ${(m.expHome ?? 0).toFixed(1)} – ${(m.expAway ?? 0).toFixed(1)} xG</span>`);
 
     return `<div class="match-card">
       <div class="match-header">
@@ -526,13 +491,11 @@ function renderMatches(filter) {
 }
 
 function filterMatches(filter, btn) {
-  currentFilter = filter;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderMatches(filter);
 }
 
-// ===================== INIT =====================
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
   const n = document.getElementById('navbar'), c = window.scrollY;
@@ -546,6 +509,7 @@ const obs = new IntersectionObserver(e => {
 }, { threshold: 0.08 });
 document.querySelectorAll('section').forEach(el => { el.classList.add('fade-in'); obs.observe(el); });
 
+renderHighConf();
 renderMatches('all');
 </script>
 </body>
