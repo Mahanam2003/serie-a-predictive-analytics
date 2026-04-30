@@ -1,13 +1,6 @@
-# ============================================
-# Serie A Data Collection Script
-# Project: Serie A Predictive Analytics
-# Inspired by Clive Beggs' SoccerAnalytics methodology
-# Applied to Serie A (Italian football)
-# ============================================
 
 rm(list = ls())  # Clear workspace
 
-# --- Pull multiple seasons of Serie A data from football-data.co.uk ---
 
 seasons <- c("2021" = "2122", "2022" = "2223", 
              "2023" = "2324", "2024" = "2425")

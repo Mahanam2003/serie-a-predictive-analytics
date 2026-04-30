@@ -346,5 +346,3 @@ ggsave("plots/model_comparison_final.png", p2, width=10, height=6, dpi=300)
 
 # Save
 write.csv(comparison, "data/final_model_comparison.csv", row.names=FALSE)
-cat("\nAll files saved!\n")
-cat("Ready for Script 14: Weather + Google Trends\n")
